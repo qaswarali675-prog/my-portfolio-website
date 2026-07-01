@@ -185,7 +185,7 @@ section {
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 80% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -221,8 +221,15 @@ section {
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 .description {
@@ -309,6 +316,8 @@ section {
 .image-wrapper {
     position: relative;
     z-index: 2;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid var(--primary-color);
@@ -319,6 +328,8 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .floating-shape {
@@ -354,8 +365,15 @@ section {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 .scroll-down {
@@ -379,9 +397,22 @@ section {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 /* ===== About Section ===== */
@@ -557,6 +588,7 @@ section {
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -662,8 +694,15 @@ section {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ===== Education Section ===== */
@@ -1112,24 +1151,24 @@ textarea.form-control {
     .hero-section {
         padding: 100px 0 50px;
     }
-    
+
     .name {
         font-size: 42px;
     }
-    
+
     .typing-text {
         font-size: 22px;
     }
-    
+
     .image-container {
         width: 300px;
         height: 300px;
     }
-    
+
     section {
         padding: 80px 0;
     }
-    
+
     .section-title h2 {
         font-size: 36px;
     }
@@ -1139,49 +1178,49 @@ textarea.form-control {
     .hero-section {
         text-align: center;
     }
-    
+
     .hero-buttons {
         justify-content: center;
     }
-    
+
     .social-icons {
         justify-content: center;
     }
-    
+
     .image-container {
         width: 250px;
         height: 250px;
         margin: 0 auto;
     }
-    
+
     .name {
         font-size: 36px;
     }
-    
+
     .typing-text {
         font-size: 18px;
     }
-    
+
     .description {
         font-size: 16px;
     }
-    
+
     .section-title h2 {
         font-size: 30px;
     }
-    
+
     .skill-category,
     .project-card,
     .service-card,
     .contact-form {
         margin-bottom: 20px;
     }
-    
+
     .education-timeline,
     .experience-timeline {
         padding-left: 20px;
     }
-    
+
     .timeline-icon,
     .exp-icon {
         left: -29px;
@@ -1193,24 +1232,24 @@ textarea.form-control {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .btn {
         width: 100%;
         max-width: 250px;
     }
-    
+
     .info-item {
         flex-direction: column;
     }
-    
+
     .info-item .label {
         min-width: auto;
     }
-    
+
     .project-filter {
         gap: 10px;
     }
-    
+
     .filter-btn {
         padding: 8px 20px;
         font-size: 14px;

@@ -36,4 +36,4 @@ skillSchema.pre('save', function (next) {
   next();
 });
 
-module.exports = mongoose.model('Skill', skillSchema);
+module.exports = mongoose.model('Skill', skillSchema, 'skills');

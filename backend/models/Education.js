@@ -41,4 +41,4 @@ educationSchema.pre('save', function (next) {
   next();
 });
 
-module.exports = mongoose.model('Education', educationSchema);
+module.exports = mongoose.model('Education', educationSchema, 'education');

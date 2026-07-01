@@ -1,0 +1,60 @@
+QASWAR ABBAS
+Computer Science Student & Web Developer
+
+CONTACT
+Email: qaswar@example.com
+LinkedIn: https://linkedin.com
+GitHub: https://github.comTwitter: https://twitter.com
+
+SUMMARY
+Passionate Computer Science student with expertise in web development, AI, and IoT solutions. 
+Turning ideas into reality through code with strong problem-solving skills and a commitment to continuous learning.
+
+SKILLS
+• Web Development: HTML5, CSS3, JavaScript, React.js, Node.js
+• Programming: Python, Java, C++
+• Database: MongoDB, MySQL
+• Tools: Git, VS Code, Figma
+• Languages: English, Urdu
+
+PROJECTS
+AIoT Smart Home Assistant
+• Intelligent home automation system using AI and IoT technologies
+• Smart device control and monitoring capabilities
+• Technologies: Python, IoT sensors, Machine Learning
+
+Student Management System
+• Full-stack application for educational institutions
+• Features: Student records, attendance, grading
+• Technologies: React.js, Node.js, MongoDB
+
+Portfolio Website
+• Personal portfolio showcasing projects and skills
+• Responsive design with modern UI/UX
+• Technologies: HTML, CSS, JavaScript, Bootstrap
+
+Smart Attendance System
+• Automated attendance tracking using facial recognition
+• Real-time monitoring and reporting
+• Technologies: Python, OpenCV, Machine Learning
+
+E-Commerce Website
+• Full-featured online shopping platform
+• Product management, cart, and payment integration
+• Technologies: React.js, Node.js, MongoDB
+
+EDUCATION
+Bachelor of Science in Computer Science
+[University Name] | [Expected Graduation: 2025]
+• GPA: [Your GPA]
+• Relevant Coursework: Data Structures, Algorithms, Web Development, AI, IoT
+
+CERTIFICATIONS
+• [Certification Name] - [Year]
+• [Certification Name] - [Year]
+
+INTERESTS
+• Web Development
+• Artificial Intelligence
+• Internet of Things (IoT)
+• Open Source Contributions

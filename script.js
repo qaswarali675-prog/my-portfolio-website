@@ -365,4 +365,30 @@ document.addEventListener('keydown', function (e) {
 //     }
 // }
 
+// ===== Make Project Cards Clickable =====
+const projectCards = document.querySelectorAll('.project-card');
+const projectLinks = {
+    'AIoT Smart Home Assistant': 'https://github.com/qaswarabbas/smart-home-assistant',
+    'Student Management System': 'https://github.com/qaswarabbas/student-management-system',
+    'Portfolio Website': 'https://github.com/qaswarabbas/portfolio-website',
+    'Smart Attendance System': 'https://github.com/qaswarabbas/smart-attendance-system',
+    'E-Commerce Website': 'https://github.com/qaswarabbas/ecommerce-website'
+};
+
+projectCards.forEach(card => {
+    card.addEventListener('click', function (e) {
+        // Don't trigger if clicking on the overlay links
+        if (e.target.closest('.project-links')) {
+            return;
+        }
+
+        const projectTitle = this.querySelector('h3').textContent;
+        const projectUrl = projectLinks[projectTitle];
+
+        if (projectUrl) {
+            window.open(projectUrl, '_blank');
+        }
+    });
+});
+
 console.log('Portfolio website loaded successfully!');
