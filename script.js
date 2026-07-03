@@ -157,36 +157,15 @@ filterBtns.forEach(btn => {
     });
 });
 
-// ===== Contact Form Handling with EmailJS =====
+// ===== Contact Form Handling =====
+// Web3Forms handles submission natively via HTML form action
+// No JavaScript intervention needed - form submits directly to Web3Forms API
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    // Initialize EmailJS (replace with your actual public key)
-    // emailjs.init("YOUR_PUBLIC_KEY");
-
     contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        // Get form values
-        const formData = new FormData(this);
-        const templateParams = {
-            from_name: formData.get('name') || this.querySelector('[name="name"]').value,
-            from_email: formData.get('email') || this.querySelector('[name="email"]').value,
-            message: formData.get('message') || this.querySelector('[name="message"]').value
-        };
-
-        // Send email using EmailJS (replace with your actual service ID and template ID)
-        // emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-        //     .then(function(response) {
-        //         alert('Thank you for your message! I will get back to you soon.');
-        //         contactForm.reset();
-        //     }, function(error) {
-        //         alert('Failed to send message. Please try again or contact me directly via email.');
-        //         console.error('EmailJS error:', error);
-        //     });
-
-        // Temporary fallback until EmailJS credentials are configured
-        alert('Thank you for your message! I will get back to you soon.');
-        this.reset();
+        // Allow native form submission to Web3Forms
+        // Don't prevent default - let the form submit normally
+        // Web3Forms will handle the redirect/success message
     });
 }
 
