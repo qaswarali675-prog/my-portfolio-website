@@ -157,20 +157,35 @@ filterBtns.forEach(btn => {
     });
 });
 
-// ===== Contact Form Handling =====
+// ===== Contact Form Handling with EmailJS =====
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
+    // Initialize EmailJS (replace with your actual public key)
+    // emailjs.init("YOUR_PUBLIC_KEY");
+
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
         // Get form values
         const formData = new FormData(this);
+        const templateParams = {
+            from_name: formData.get('name') || this.querySelector('[name="name"]').value,
+            from_email: formData.get('email') || this.querySelector('[name="email"]').value,
+            message: formData.get('message') || this.querySelector('[name="message"]').value
+        };
 
-        // Here you would typically send the form data to a server
-        // For demonstration, we'll show an alert
+        // Send email using EmailJS (replace with your actual service ID and template ID)
+        // emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        //     .then(function(response) {
+        //         alert('Thank you for your message! I will get back to you soon.');
+        //         contactForm.reset();
+        //     }, function(error) {
+        //         alert('Failed to send message. Please try again or contact me directly via email.');
+        //         console.error('EmailJS error:', error);
+        //     });
+
+        // Temporary fallback until EmailJS credentials are configured
         alert('Thank you for your message! I will get back to you soon.');
-
-        // Reset form
         this.reset();
     });
 }
@@ -396,10 +411,10 @@ console.log('Portfolio website loaded successfully!');
 // ===== CV Download Function =====
 function downloadCV() {
     const element = document.getElementById('cv-template');
-    
+
     // Make the template visible temporarily for PDF generation
     element.style.display = 'block';
-    
+
     const opt = {
         margin: 0,
         filename: 'Qaswar_Abbas_CV.pdf',
@@ -407,7 +422,7 @@ function downloadCV() {
         html2canvas: { scale: 2, useCORS: true },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
-    
+
     // Generate and download PDF
     html2pdf().set(opt).from(element).save().then(() => {
         // Hide the template again after generation
