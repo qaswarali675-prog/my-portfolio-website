@@ -19,6 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
+    <!-- html2pdf.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -65,8 +68,8 @@
                             AI, and IoT solutions. Turning ideas into reality through code.</p>
                         <div class="hero-buttons">
                             <a href="#contact" class="btn btn-primary">Contact Me</a>
-                            <a href="Qaswar_Abbas_CV.pdf" download="Qaswar_Abbas_CV.pdf"
-                                class="btn btn-outline-primary">Download CV <i class="fas fa-download"></i></a>
+                            <button onclick="downloadCV()" class="btn btn-outline-primary">Download CV <i
+                                    class="fas fa-download"></i></button>
                         </div>
                         <div class="social-icons">
                             <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
@@ -820,6 +823,109 @@
     <button id="backToTop" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Hidden CV Template for PDF Generation -->
+    <div id="cv-template" style="display: none;">
+        <div style="padding: 40px; font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h1 style="margin: 0; color: #333;">QASWAR ABBAS</h1>
+                <p style="margin: 5px 0; color: #666;">Artificial Intelligence Student & Full-Stack Developer</p>
+                <p style="margin: 5px 0; color: #666; font-size: 12px;">
+                    Email: qaswar@example.com | Location: Pakistan | GitHub: github.com/qaswarabbas
+                </p>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <h2 style="border-bottom: 2px solid #333; padding-bottom: 10px; color: #333;">PROFESSIONAL SUMMARY</h2>
+                <p style="margin: 10px 0; line-height: 1.6; color: #444;">
+                    Motivated and detail-oriented Computer Science student specializing in Artificial Intelligence.
+                    Proficient in full-stack web development, mobile application development, and database management.
+                    Proven experience in building AI-driven automation systems and cross-platform mobile apps.
+                </p>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <h2 style="border-bottom: 2px solid #333; padding-bottom: 10px; color: #333;">TECHNICAL SKILLS</h2>
+                <ul style="margin: 10px 0; padding-left: 20px; color: #444;">
+                    <li><strong>Frontend Development:</strong> HTML5, CSS3, JavaScript (ES6), React.js, Bootstrap</li>
+                    <li><strong>Mobile App Development:</strong> Flutter Framework, Dart Language</li>
+                    <li><strong>Backend & Automation:</strong> Python, Node.js</li>
+                    <li><strong>Databases:</strong> MongoDB, MongoDB Atlas</li>
+                    <li><strong>Tools & Platforms:</strong> Git, GitHub, Vercel, Railway, VS Code</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <h2 style="border-bottom: 2px solid #333; padding-bottom: 10px; color: #333;">PROJECTS</h2>
+
+                <div style="margin-bottom: 15px;">
+                    <h3 style="margin: 0 0 5px 0; color: #333;">1. Full-Stack Personal Portfolio Website</h3>
+                    <p style="margin: 5px 0; line-height: 1.6; color: #444;">
+                        Designed and deployed a responsive personal portfolio using a modern HTML/CSS/JavaScript
+                        frontend.
+                        Hosted the frontend on Vercel and successfully connected it with a backend environment for
+                        dynamic data loading.
+                        Integrated cloud database management using MongoDB Atlas to showcase dynamic collections.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <h3 style="margin: 0 0 5px 0; color: #333;">2. Jarvis AI Agent for System Automation</h3>
+                    <p style="margin: 5px 0; line-height: 1.6; color: #444;">
+                        Engineered a local system-level automation assistant utilizing a Python backend and React user
+                        interface.
+                        Enabled the agent to securely process and execute local operating system commands through AI
+                        integration.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <h3 style="margin: 0 0 5px 0; color: #333;">3. AI-Integrated Human Resource Management System (HRMS)
+                    </h3>
+                    <p style="margin: 5px 0; line-height: 1.6; color: #444;">
+                        Developed a comprehensive system architecture for automated HR processes.
+                        Implemented features for smart hiring, attendance automation, and streamlined payroll management
+                        using AI concepts.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <h2 style="border-bottom: 2px solid #333; padding-bottom: 10px; color: #333;">EXPERIENCE & INTERNSHIPS
+                </h2>
+                <div style="margin-bottom: 15px;">
+                    <h3 style="margin: 0 0 5px 0; color: #333;">Web Development Intern | Geeks Kepler (via Unstop
+                        Platform)</h3>
+                    <p style="margin: 5px 0; line-height: 1.6; color: #444;">
+                        Gained hands-on experience in modern web development frameworks and industry-standard coding
+                        practices.
+                        Collaborated on implementing UI components and managing full-stack code pipelines.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <h2 style="border-bottom: 2px solid #333; padding-bottom: 10px; color: #333;">EDUCATION</h2>
+                <div style="margin-bottom: 15px;">
+                    <h3 style="margin: 0 0 5px 0; color: #333;">Bachelor of Science in Computer Science (Artificial
+                        Intelligence)</h3>
+                    <p style="margin: 5px 0; color: #444;">6th Semester Student</p>
+                    <p style="margin: 5px 0; color: #444;">Core Coursework: Artificial Intelligence, Numerical
+                        Computing, Parallel & Distributed Computing</p>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <h2 style="border-bottom: 2px solid #333; padding-bottom: 10px; color: #333;">CERTIFICATIONS & TRAININGS
+                </h2>
+                <ul style="margin: 10px 0; padding-left: 20px; color: #444;">
+                    <li>Honhaar Student Card Certification – Honhaar Jawan Program</li>
+                    <li>Cisco Networking Academy Training Modules</li>
+                    <li>Professional Technical Tracks – IT Professional Training Initiatives</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

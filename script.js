@@ -392,3 +392,29 @@ projectCards.forEach(card => {
 });
 
 console.log('Portfolio website loaded successfully!');
+
+// ===== CV Download Function =====
+function downloadCV() {
+    const element = document.getElementById('cv-template');
+    
+    // Make the template visible temporarily for PDF generation
+    element.style.display = 'block';
+    
+    const opt = {
+        margin: 0,
+        filename: 'Qaswar_Abbas_CV.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+    
+    // Generate and download PDF
+    html2pdf().set(opt).from(element).save().then(() => {
+        // Hide the template again after generation
+        element.style.display = 'none';
+    }).catch((error) => {
+        console.error('PDF generation failed:', error);
+        element.style.display = 'none';
+        alert('Failed to generate PDF. Please try again.');
+    });
+}
